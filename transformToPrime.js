@@ -1,6 +1,6 @@
-function isPrime (n) {
-    for (let item = 2; item < n; item +=1) {
-      if (n % item === 0) {
+function isPrime (totalSum) {
+    for (let item = 2; item < totalSum; item +=1) {
+      if (totalSum % item === 0) {
         return false;
       }
     }
@@ -22,10 +22,7 @@ function minimumNumber(numbers) {
         totalSum += 1;
         neededToBePrime += 1;
       }
-      return neededToBePrime;
-        
+      return neededToBePrime;    
 }
 
-
-
-minimumNumber([3,1,2]);
+console.log(minimumNumber([3,1,2]));
