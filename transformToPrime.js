@@ -16,8 +16,8 @@ function minimumNumber(numbers) {
 
     if (isPrime(totalSum)){
         return 0;
-    }
-    
+}
+
     while(!isPrime(totalSum)) {
         totalSum += 1;
         neededToBePrime += 1;
