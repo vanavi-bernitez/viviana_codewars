@@ -1,7 +1,7 @@
 // https://edabit.com/challenge/MCK2Rqzn78pMksvsK
 const freqCount = (arr, el) => {
     const resultArray = [];
-    // initial conditions to analyze
+    // initial conditions to be analized
     let nestLevel = 0;
     let analyzedArray = arr;
     let elementIsArray = true; 
