@@ -14,4 +14,5 @@ function longestConsec(strarr, k) {
     } 
 }
 
+
 console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2));

@@ -23,10 +23,13 @@ var spiralOrder = function(matrix) {
         right -= 1;
 
         //fill bottom row            && top <= bottom
-        for (let item = right; item >= left && top <= bottom; item -= 1){
-            spiralArray.push(matrix[bottom][item]);
+        if (top <= bottom) {
+            for (let item = right; item >= left /*&& top <= bottom */; item -= 1){
+                spiralArray.push(matrix[bottom][item]);
+            }
+            bottom -= 1;
         }
-        bottom -= 1;
+        
 
         //fill left column in the middle    && left <= right
         for (let item = bottom; item >= top && left <= right; item-= 1){
@@ -63,4 +66,8 @@ var spiralOrder = function(matrix) {
 // };
 
 
-console.log(spiralOrder([[1,2,3],[4,5,6],[7,8,9]]));
+
+// console.log(spiralOrder([[1,2,3],[4,5,6],[7,8,9]]));
+// [1,2,3,6,9,8,7,4,5]
+console.log(spiralOrder([[1,2,3,4],[5,6,7,8],[9,10,11,12]]));
+// [1,2,3,4,8,12,11,10,9,5,6,7]

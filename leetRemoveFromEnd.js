@@ -12,5 +12,5 @@ const removeNthFromEnd = (head, n) => {
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/1164542/js-python-java-c-easy-two-pointer-solution-w-explanation/?envType=study-plan&id=level-2
 // explanation and solution using .next
 
-console.log(removeNthFromEnd([1,2], 1));
+console.log(removeNthFromEnd([1,2,3,4,5], 1));
 
