@@ -19,13 +19,13 @@
 // returns [2, 5, 9] without the {} from the callback function
 
 
-const x = [1,2,3,4,5,6,10];
-const newArray = x.map((element) => {
-    if (element >= 4) {
-        return element*2;
-    }
-    return element;
-})
+// const x = [1,2,3,4,5,6,10];
+// const newArray = x.map((element) => {
+//     if (element >= 4) {
+//         return element*2;
+//     }
+//     return element;
+// })
 
 
 // function wave(str){
@@ -74,12 +74,6 @@ const newArray = x.map((element) => {
 // }
 
 
-const person = {
-    name: "John",
-    sayName(name) {
-      console.log(`My name is ${this.name}.`);
-    }
-  };
-  
-  person.sayName(); // logs "My name is John."
+
+
  

@@ -1,5 +1,6 @@
 /* Every book in the array of objects has more than 200 pages?
  */
+
 const booksStock = [
     { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', pages: 180 },
     { title: 'To Kill a Mockingbird', author: 'Harper Lee', pages: 281 },

@@ -29,7 +29,6 @@ var spiralOrder = function(matrix) {
             }
             bottom -= 1;
         }
-        
 
         //fill left column in the middle    && left <= right
         for (let item = bottom; item >= top && left <= right; item-= 1){
