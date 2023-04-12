@@ -1,26 +1,24 @@
-// const getPeople = async () => {
-//     try {
-//         const peopleData = await fetch('https://swapi.dev/api/people/');
-//         const result = await peopleData.json();
-//         const peopleResult = result.results;
-//         const peopleReducedProperties = peopleResult.map((person) => {
-//             const selectedProperties = {
-//                 name: person.name,
-//                 birthYear: person['birth_year'],
-//                 gender: person.gender,
-//                 height: person.height
-//             }
-//             return selectedProperties;
-//         });
-//         const tallerPeople = peopleReducedProperties.filter((personProperties) => personProperties.height > 175);
-//         console.log(tallerPeople);
-//     } catch (error) {
-//         console.error(`Something goes wrong: ${error}`);
-//     }
-// }
-
-// getPeople();
-
+const getPeople = async () => {
+    try {
+        const peopleData = await fetch('https://swapi.dev/api/people/');
+        const result = await peopleData.json();
+        const peopleResult = result.results;
+        const peopleReducedProperties = peopleResult.map((person) => {
+            const selectedProperties = {
+                name: person.name,
+                birthYear: person['birth_year'],
+                gender: person.gender,
+                height: person.height
+            }
+            return selectedProperties;
+        });
+        const tallerPeople = peopleReducedProperties.filter((personProperties) => personProperties.height > 175);
+        console.log(tallerPeople);
+    } catch (error) {
+        console.error(`Something goes wrong: ${error}`);
+    }
+}
+getPeople();
 
 
 const getStarships = async () => {
@@ -35,5 +33,4 @@ const getStarships = async () => {
         console.error(`Something goes wrong: ${error}`)
     }
 }
-
 getStarships();
