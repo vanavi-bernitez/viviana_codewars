@@ -17,87 +17,40 @@ console.log(countProperties(anotherObj)); // 4
 
 // console.log(Object.entries(myObj))
 
-const storesArray = [];
 
-randomNumber = Math.round(Math.random() * 10);
 
-for (let store = 0; store < 3; store += 1) {
-    storesArray.push(Math.round(Math.random() * 10 * store+1))
+
+
+const product = {
+    name: "iPhone 13",
+    price: 999,
+    description: "The latest iPhone with all-new A15 Bionic chip",
+    features: {
+      screen: "6.1-inch Super Retina XDR display",
+      camera: "Dual-camera system with 12MP Ultra Wide and Wide cameras",
+      battery: "Up to 19 hours of video playback"
+    },
+  };
+
+
+//console.log(Object.keys(product))  // doesn't work if i wanna show the nested properties too
+
+const nestedPropertiesCount = (obj) => {
+    let count = 0;
+
+    for (let objProperty in obj) {
+        if (typeof obj[objProperty] === 'object'){
+            count += nestedPropertiesCount(obj[objProperty]);
+        }
+        // si uso else, si o si, tiene que analizar la condición del if
+        // en este caso yo no necesito que el count +=1 sea el else. Este se ejecuta si o si, a pesar del if 
+        count += 1;      
+    }
+    return count;
 }
 
+console.log(nestedPropertiesCount(product));
 
-console.log(storesArray)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const product = {
-//     name: "iPhone 13",
-//     price: 999,
-//     description: "The latest iPhone with all-new A15 Bionic chip",
-//     features: {
-//       screen: "6.1-inch Super Retina XDR display",
-//       camera: "Dual-camera system with 12MP Ultra Wide and Wide cameras",
-//       battery: "Up to 19 hours of video playback",
-//     },
-//   };
   
 //   function countNestedProperties(obj) {
 //     let count = 0;
